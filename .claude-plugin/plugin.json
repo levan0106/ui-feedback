@@ -1,8 +1,8 @@
 {
   "name": "tl-ui-feedback",
   "displayName": "UI Feedback",
-  "version": "0.2.0",
-  "description": "Chỉ vào phần UI sai trên trang dev (extension hoặc `tl-ui-feedback serve`), agent nhận ghi chú và file:dòng nguồn để sửa. Gồm skill tl-ui-feedback và MCP tl_ui_feedback_poll / tl_ui_feedback_reply.",
+  "version": "0.1.1",
+  "description": "Point at the wrong part of your UI in the browser (extension or `tl-ui-feedback serve`); the agent receives your note and the source file:line to fix it. Includes the tl-ui-feedback skill and MCP tools tl_ui_feedback_poll / tl_ui_feedback_reply.",
   "keywords": [
     "ui",
     "feedback",
