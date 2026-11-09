@@ -1,6 +1,6 @@
 {
   "name": "ui-feedback-bridge",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "Chỉ vào phần UI sai trên browser, agent nhận component + file:dòng nguồn để sửa.",
   "type": "module",

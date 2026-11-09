@@ -1,7 +1,7 @@
 {
   "name": "tl-ui-feedback",
   "displayName": "UI Feedback",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Point at the wrong part of your UI in the browser (extension or `tl-ui-feedback serve`); the agent receives your note and the source file:line to fix it. Includes the tl-ui-feedback skill and MCP tools tl_ui_feedback_poll / tl_ui_feedback_reply.",
   "keywords": [
     "ui",

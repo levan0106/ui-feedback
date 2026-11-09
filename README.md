@@ -19,7 +19,14 @@ node bridge/cli.mjs install --path   # also add the command to your PATH (Window
 
 Check with `claude mcp list`. Remove with `tl-ui-feedback uninstall`.
 
-As a Claude Code plugin instead: `claude --plugin-dir <this-folder>`. Use one of the two, not both.
+As a Claude Code plugin instead (no clone needed):
+
+```
+/plugin marketplace add levan0106/ui-feedback
+/plugin install tl-ui-feedback@ui-feedback
+```
+
+Add the marketplace first, then install, then start a new session. On Claude Code 2.1.275+ one line works: `/plugin install tl-ui-feedback --marketplace levan0106/ui-feedback`. To try a local clone: `claude --plugin-dir <this-folder>`. Use the plugin or `install`, not both.
 
 ## Use
 
