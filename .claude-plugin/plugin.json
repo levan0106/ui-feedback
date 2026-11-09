@@ -1,0 +1,21 @@
+{
+  "name": "tl-ui-feedback",
+  "displayName": "UI Feedback",
+  "version": "0.2.0",
+  "description": "Chỉ vào phần UI sai trên trang dev (extension hoặc `tl-ui-feedback serve`), agent nhận ghi chú và file:dòng nguồn để sửa. Gồm skill tl-ui-feedback và MCP tl_ui_feedback_poll / tl_ui_feedback_reply.",
+  "keywords": [
+    "ui",
+    "feedback",
+    "browser",
+    "dev-server",
+    "mcp"
+  ],
+  "mcpServers": {
+    "tl-ui-feedback": {
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/mcp/server.mjs"
+      ]
+    }
+  }
+}
