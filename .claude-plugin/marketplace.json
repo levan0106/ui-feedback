@@ -6,7 +6,7 @@
       "name": "tl-ui-feedback",
       "source": "./",
       "description": "Point at the wrong part of your UI in the browser; the agent gets your note plus the source file:line to fix it.",
-      "version": "0.1.2"
+      "version": "0.1.3"
     }
   ]
 }

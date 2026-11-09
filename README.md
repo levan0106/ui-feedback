@@ -19,14 +19,15 @@ node bridge/cli.mjs install --path   # also add the command to your PATH (Window
 
 Check with `claude mcp list`. Remove with `tl-ui-feedback uninstall`.
 
-As a Claude Code plugin instead (no clone needed):
+As a Claude Code plugin instead (no clone needed). Run these **one at a time**, not pasted together:
 
-```
-/plugin marketplace add levan0106/ui-feedback
-/plugin install tl-ui-feedback@ui-feedback
-```
+1. `/plugin marketplace add levan0106/ui-feedback`
+2. `/plugin install tl-ui-feedback@ui-feedback`
+3. Start a new session.
 
-Add the marketplace first, then install, then start a new session. On Claude Code 2.1.275+ one line works: `/plugin install tl-ui-feedback --marketplace levan0106/ui-feedback`. To try a local clone: `claude --plugin-dir <this-folder>`. Use the plugin or `install`, not both.
+On Claude Code 2.1.275+ a single command does steps 1 and 2: `/plugin install tl-ui-feedback --marketplace levan0106/ui-feedback`.
+
+To try a local clone: `claude --plugin-dir <this-folder>`. Use the plugin or `install`, not both.
 
 ## Use
 
@@ -46,6 +47,19 @@ Alternatively load `extension/` in `chrome://extensions` (Developer mode, Load u
 `tl-ui-feedback install | uninstall | serve | start | poll | reply "<text>" | status | url | token | stop`
 
 Run `tl-ui-feedback serve --list` to see running servers and `serve --stop <port>` to stop one.
+
+## Uninstall
+
+Plugin install (one command at a time):
+
+1. `tl-ui-feedback stop` to stop the bridge (the command is available inside a Claude Code session while the plugin is on).
+2. `/plugin uninstall tl-ui-feedback@ui-feedback`
+3. `/plugin marketplace remove ui-feedback` (optional, removes the marketplace entry too).
+4. Start a new session.
+
+Installed with `node bridge/cli.mjs install`: run `tl-ui-feedback uninstall`.
+
+If you ran `tl-ui-feedback install-hooks`, run `tl-ui-feedback uninstall-hooks` first; it removes the permission hooks from `~/.claude/settings.json` and `~/.codex/hooks.json`. Optionally delete `~/.ui-feedback-bridge/` (token and runtime state). The Chrome extension, if loaded, is removed from `chrome://extensions`.
 
 ## Security
 
